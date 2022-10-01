@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  background-image: linear-gradient(135deg, #ead666a6 0%, #cfa329 100%);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.conteiner-img {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.conteiner-img .img {
+  width: 70%;
+}
+
+.conteiner-form {
+  display: flex;
+  justify-content: center;
+  width: 50vw;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffff;
+  border-radius: 2rem;
+  box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.35);
+  height: 400px;
+  width: 70%;
+}
+
+.logo {
+  position: absolute;
+  padding-top: 1.5rem;
+}
+
+.form .registerLogo {
+  padding-bottom: 3rem;
+}
+
+.conteiner-inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.8rem;
+  text-align: left;
+  width: 90%;
+  height: 150px;
+}
+
+.conteiner-inputs-email {
+  position: relative;
+  padding-top: 13px;
+  margin-bottom: 0.5rem;
+}
+
+.conteiner-inputs-email .email:focus {
+  border-bottom: 2px solid #3951b2;
+}
+
+.conteiner-inputs-email .email::placeholder {
+  color: transparent;
+}
+
+.conteiner-inputs-email .label-email {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+}
+
+.conteiner-inputs-email .email {
+  border: 0;
+  border-bottom: 2px solid lightgrey;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.conteiner-inputs-email input:focus + label,
+.conteiner-inputs-email input:not(:placeholder-shown) + label {
+  font-size: 13px;
+  margin-top: 0;
+  color: #3951b2;
+}
+
+.button {
+  margin-top: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  padding: 0.7rem 2rem;
+  background-image: linear-gradient(135deg, #ddc124 0%, #e9ae0d 100%);
+  background-size: 200% auto;
+  border: none;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.containerUser {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.containerUser #notExists {
+  height: 19px;
+  color: rgb(204, 14, 14);
+  font-weight: 600;
+}
+
+.containerUser .registrar {
+  position: absolute;
+  border: none;
+  color: #f7b708;
+  font-size: 13px;
+  font-weight: 600;
+  left: 0px;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+}
+
+.registrar:hover {
+  color: #ff8800;
+}
+
+button:disabled {
+  background-image: linear-gradient(135deg, #919191 0%, #5c5b5a 100%);
+  background-size: 200% auto;
+}
+
+button:hover {
+  background-position: right center;
+}
+
+@media (max-width: 450px) {
+  .conteiner {
+    flex-direction: column-reverse;
+    position: relative;
+  }
+
+  .conteiner-img {
+    height: 0%;
+    width: 0%;
+  }
+
+  .conteiner-form {
+    position: absolute;
+    width: 100%;
+  }
+
+  .form {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .conteiner {
+    flex-direction: column-reverse;
+    position: relative;
+  }
+
+  .conteiner-img {
+    height: 0%;
+    width: 0%;
+  }
+
+  .conteiner-form {
+    position: absolute;
+    width: 100%;
+  }
+}
+
+@media (max-width: 950px) {
+  .form {
+    width: 90%;
+  }
+}
+
+@media (min-width: 2560px) {
+  .form h2 {
+    font-size: 0px;
+  }
+
+  .conteiner-form {
+    height: 40%;
+  }
+
+  .form {
+    height: 100%;
+  }
+
+  .conteiner-inputs {
+    height: 50%;
+  }
+
+  .conteiner-inputs-email .email {
+    font-size: 28px;
+  }
+
+  .conteiner-inputs-email input:focus + label,
+  .conteiner-inputs-email input:not(:placeholder-shown) + label {
+    font-size: 18px;
+    margin-top: 0;
+    color: #3951b2;
+  }
+
+  .form h2 {
+    font-size: 50px;
+  }
+}
